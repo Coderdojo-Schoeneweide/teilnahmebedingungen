@@ -13,8 +13,8 @@ jobs:
       - name: Github Action for LaTeX
         uses: xu-cheng/latex-action@v2
         with:
-          compiler: xetex
           root_file: teilnahmebedingungen-cd-shoeneweideberlin.tex
+          latexmk_use_xelatex: true
           
       - name: Deploy
         uses: dmnemec/copy_file_to_another_repo_action@v1.0.4
