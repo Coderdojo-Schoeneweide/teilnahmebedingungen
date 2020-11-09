@@ -26,6 +26,6 @@ jobs:
           source_file: 'teilnahmebedingungen-cd-shoeneweideberlin.pdf'
           destination_repo: 'Coderdojo-Schoeneweide/website-hugo'
           destination_folder: 'static/docs'
-          user_email: 'actions@github.com'
-          user_name: 'GitHub-Actions'
+          user_email: 'build-latex@github-actions.com'
+          user_name: 'Build LaTeX'
           commit_message: 'Updated Teilnahmebedingungen PDF'
