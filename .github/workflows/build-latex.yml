@@ -18,14 +18,13 @@ jobs:
           root_file: teilnahmebedingungen-cd-shoeneweideberlin.tex
           latexmk_use_xelatex: true
           
-      - name: Deploy
-        uses: dmnemec/copy_file_to_another_repo_action@v1.0.4
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      - name: Install SSH key
+        uses: shimataro/ssh-key-action@v2
         with:
-          source_file: 'teilnahmebedingungen-cd-shoeneweideberlin.pdf'
-          destination_repo: 'Coderdojo-Schoeneweide/website-hugo'
-          destination_folder: 'static/docs'
-          user_email: 'build-latex@github-actions.com'
-          user_name: 'Build LaTeX'
-          commit_message: 'Updated Teilnahmebedingungen PDF'
+          key: ${{ secrets.API_TOKEN_GITHUB }}
+          name: id_ed25519
+      
+      - name: Deploy
+        run: |
+          ls -a
+          pwd
