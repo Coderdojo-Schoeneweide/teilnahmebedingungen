@@ -13,6 +13,8 @@ jobs:
       - name: Github Action for LaTeX
         uses: xu-cheng/latex-action@v2
         with:
+          extra_system_packages: fontconfig
+          pre_compile: "mkdir ~/.fonts && cd ~/.fonts && wget https://github.com/google/fonts/raw/master/ofl/sourcesanspro/SourceSansPro-Regular.ttf && fc-cache -f -v"
           root_file: teilnahmebedingungen-cd-shoeneweideberlin.tex
           latexmk_use_xelatex: true
           
