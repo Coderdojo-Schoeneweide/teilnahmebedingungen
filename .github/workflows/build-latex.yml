@@ -1,0 +1,28 @@
+name: Build LaTeX document
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build-latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+        
+      - name: Github Action for LaTeX
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: teilnahmebedingungen-cd-shoeneweideberlin.tex
+          
+      - name: Deploy
+        uses: dmnemec/copy_file_to_another_repo_action@v1.0.4
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source_file: 'teilnahmebedingungen-cd-shoeneweideberlin.pdf'
+          destination_repo: 'Coderdojo-Schoeneweide/website-hugo'
+          destination_folder: 'static'
+          user_email: 'actions@github.com'
+          user_name: 'GitHub-Actions'
+          commit_message: 'Updated Teilnahmebedingungen PDF'
