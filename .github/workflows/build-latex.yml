@@ -30,7 +30,7 @@ jobs:
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
           cd website-hugo/
-          cp ../teilnahmebedingungen-cd-shoeneweideberlin.pdf static/docs/
+          cp ../teilnahmebedingungen-cd-shoeneweideberlin.pdf static/docs/teilnahmebedingungen.pdf
           git add static/docs
           git commit -m "Updated Teilnahmebedingungen PDF"
           git push origin master
