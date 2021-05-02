@@ -5,5 +5,4 @@ Die LaTeX Dateien für den Teilnahmebedingungsbogen
 * Repo clonen
 * z.B. in Texmaker öffnen
 * Änderungen vornehmen
-* Neues PDF erstellen
-* PDF wird bei push auf `master` automatisch auch auf der Website aktualisiert
+* LaTeX wird bei push auf `master` automatisch als PDF gebuildet und auch auf der Website aktualisiert
