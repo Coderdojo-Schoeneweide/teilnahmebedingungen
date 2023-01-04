@@ -14,7 +14,7 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           extra_system_packages: fontconfig
-          pre_compile: "mkdir ~/.fonts && wget https://github.com/google/fonts/raw/master/ofl/sourcesanspro/SourceSansPro-Regular.ttf && wget https://github.com/google/fonts/raw/master/ofl/sourcesanspro/SourceSansPro-Bold.ttf && wget https://github.com/google/fonts/raw/master/ofl/sourcesanspro/SourceSansPro-Italic.ttf && wget https://github.com/google/fonts/raw/master/ofl/sourcesanspro/SourceSansPro-BoldItalic.ttf && mv SourceSansPro-* ~/.fonts/ && fc-cache -f -v"
+          pre_compile: "mkdir ~/.fonts && wget https://github.com/google/fonts/raw/main/ofl/sourcesanspro/SourceSansPro-Regular.ttf && wget https://github.com/google/fonts/raw/main/ofl/sourcesanspro/SourceSansPro-Bold.ttf && wget https://github.com/google/fonts/raw/main/ofl/sourcesanspro/SourceSansPro-Italic.ttf && wget https://github.com/google/fonts/raw/main/ofl/sourcesanspro/SourceSansPro-BoldItalic.ttf && mv SourceSansPro-* ~/.fonts/ && fc-cache -f -v"
           root_file: teilnahmebedingungen-cd-shoeneweideberlin.tex
           latexmk_use_xelatex: true
           
